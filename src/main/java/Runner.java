@@ -13,23 +13,29 @@ public class Runner {
 
         Team codeClan = new Team("CodeClan");
         DBHelper.save(codeClan);
+        Team northCoders = new Team("North Coders");
+        DBHelper.save(northCoders);
 
 
-        Manager manager = new Manager("Coach Carter", 100000.00, codeClan);
-        DBHelper.save(manager);
+        Manager carter = new Manager("Coach Carter", 125000.00, codeClan);
+        DBHelper.save(carter);
+        Manager kloppo = new Manager("Coach Kloppo", 150000.00, codeClan);
+        DBHelper.save(kloppo);
 
 
-        Player player1 = new Player("Ben", 50000.00, manager, codeClan);
+        Player player1 = new Player("Ben", 50000.00, carter, codeClan);
         DBHelper.save(player1);
-        Player player2 = new Player("John", 60000.00, manager, codeClan);
+        Player player2 = new Player("John", 60000.00, carter, codeClan);
         DBHelper.save(player2);
-        Player player3 = new Player("Jarrod", 70000.00, manager, codeClan);
+        Player player3 = new Player("Jarrod", 70000.00, kloppo, northCoders);
         DBHelper.save(player3);
+        Player player4 = new Player("Jarrod", 70000.00, kloppo, northCoders);
+        DBHelper.save(player4);
 
 
-
-        List<Player> players = DBHelper.getAll(Player.class);
         List<Team> teams = DBHelper.getAll(Team.class);
+        List<Player> players = DBHelper.getAll(Player.class);
+        List<Manager> managers = DBHelper.getAll(Manager.class);
 
 
 
