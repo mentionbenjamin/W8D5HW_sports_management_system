@@ -3,12 +3,14 @@ package models;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.util.Set;
 
 @Entity
 @Table(name = "managers")
 public class Manager extends Team {
 
     private double budget;
+    private Set<Player> players;
 
     public Manager(String name, double salary, double budget){
         super(name, salary);

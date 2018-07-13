@@ -1,8 +1,6 @@
 package models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "players")
@@ -18,7 +16,8 @@ public class Player extends Team {
     public Player(){}
 
 
-    @Column(name = "manager")
+    @ManyToOne
+    @JoinColumn(name = "manager_id", nullable = false)
     private Manager getManager(){
         return this.manager;
     }
