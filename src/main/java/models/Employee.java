@@ -23,6 +23,7 @@ public abstract class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public int getId(){
         return this.id;
     }
@@ -47,8 +48,5 @@ public abstract class Employee {
     public void setSalary(double salary){
         this.salary = salary;
     }
-
-
-
 
 }
