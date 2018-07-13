@@ -18,7 +18,7 @@ public class Manager extends Employee {
     public Manager(){}
 
 
-
+    @OneToMany(mappedBy = "manager", fetch = FetchType.LAZY)
     public List<Player> getPlayers(){
         return this.players;
     }
@@ -26,13 +26,5 @@ public class Manager extends Employee {
         this.players = players;
     }
 
-
-//    @OneToMany(mappedBy = "manager", fetch = FetchType.LAZY)
-//    public List<Player> getPlayers(){
-//        return this.players;
-//    }
-//    public void setPlayers(List<Player> players){
-//        this.players = players;
-//    }
 
 }

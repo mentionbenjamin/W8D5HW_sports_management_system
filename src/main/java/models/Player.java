@@ -6,10 +6,9 @@ import javax.persistence.*;
 @Table(name = "players")
 public class Player extends Employee {
 
-//    private Manager manager;
+    private Manager manager;
 
-
-    public Player(String name, double salary) {
+    public Player(String name, double salary, Manager manager) {
         super(name, salary);
     }
 
@@ -17,14 +16,15 @@ public class Player extends Employee {
 
 
 
-//    @ManyToOne
-//    @JoinColumn(name = "manager_id", nullable = false)
-//    private Manager getManager(){
-//        return this.manager;
-//    }
-//    private void setManager(Manager manager){
-//        this.manager = manager;
-//    }
+    @ManyToOne
+    @JoinColumn(name = "manager_id", nullable = false)
+    private Manager getManager(){
+        return this.manager;
+    }
+    private void setManager(Manager manager){
+        this.manager = manager;
+    }
+
 
 
 }
