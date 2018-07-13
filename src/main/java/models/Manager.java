@@ -1,5 +1,11 @@
 package models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "managers")
 public class Manager extends Team {
 
     private double budget;
@@ -9,6 +15,10 @@ public class Manager extends Team {
         this.budget = budget;
     }
 
+    public Manager(){}
+
+
+    @Column(name = "budget")
     public double getBudget(){
         return this.budget;
     }
