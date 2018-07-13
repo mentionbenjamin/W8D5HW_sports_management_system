@@ -4,15 +4,15 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "teams")
-public abstract class Team {
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "type")
+public class Team {
 
     private int id;
     private String name;
-    private double salary;
 
-    public Team(String name, double salary){
+    public Team(String name){
         this.name = name;
-        this.salary = salary;
     }
 
     public Team(){}
@@ -36,14 +36,6 @@ public abstract class Team {
         this.name = name;
     }
 
-
-    @Column(name = "salary")
-    public double getSalary(){
-        return this.salary;
-    }
-    public void setSalary(double salary){
-        this.salary = salary;
-    }
 
 
 }

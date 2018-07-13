@@ -1,40 +1,60 @@
 package models;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "managers")
-public class Manager extends Team {
+public class Manager {
 
-    private double budget;
-    private List<Player> players;
+    //    private Manager manager;
+    private int id;
+    private String name;
+    private double salary;
 
-    public Manager(String name, double salary, double budget){
-        super(name, salary);
-        this.budget = budget;
-        this.players = new ArrayList<Player>();
+    public Manager(String name, double salary) {
+        this.name = name;
+        this.salary = salary;
     }
 
     public Manager(){}
 
 
-    @Column(name = "budget")
-    public double getBudget(){
-        return this.budget;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public int getId(){
+        return this.id;
     }
-    public void setBudget(double budget){
-        this.budget = budget;
+    public void setId(int id){
+        this.id = id;
     }
 
 
-    @OneToMany(mappedBy = "manager", fetch = FetchType.LAZY)
-    public List<Player> getPlayers(){
-        return this.players;
+    @Column(name = "name")
+    public String getName(){
+        return this.name;
     }
-    public void setPlayers(List<Player> players){
-        this.players = players;
+    public void setName(String name){
+        this.name = name;
     }
+
+
+    @Column(name = "salary")
+    public double getSalary(){
+        return this.salary;
+    }
+    public void setSalary(int salary){
+        this.salary = salary;
+    }
+
+
+
+//    @OneToMany(mappedBy = "manager", fetch = FetchType.LAZY)
+//    public List<Player> getPlayers(){
+//        return this.players;
+//    }
+//    public void setPlayers(List<Player> players){
+//        this.players = players;
+//    }
 
 }
