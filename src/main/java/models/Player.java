@@ -1,5 +1,11 @@
 package models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "players")
 public class Player extends Team {
 
     private Manager manager;
@@ -9,6 +15,10 @@ public class Player extends Team {
         this.manager = manager;
     }
 
+    public Player(){}
+
+
+    @Column(name = "manager")
     private Manager getManager(){
         return this.manager;
     }
