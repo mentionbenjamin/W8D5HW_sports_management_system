@@ -1,7 +1,12 @@
 package models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "teams")
 public abstract class Team {
 
+    private int id;
     private String name;
     private double salary;
 
@@ -10,6 +15,20 @@ public abstract class Team {
         this.salary = salary;
     }
 
+    public Team(){}
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public int getId(){
+        return this.id;
+    }
+    public void setId(int id){
+        this.id = id;
+    }
+
+
+    @Column(name = "name")
     public String getName(){
         return this.name;
     }
@@ -18,6 +37,7 @@ public abstract class Team {
     }
 
 
+    @Column(name = "salary")
     public double getSalary(){
         return this.salary;
     }
