@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -10,7 +11,7 @@ public class Team {
     private int id;
     private String name;
     private Manager manager;
-    private Player player;
+    private List<Player> players;
 
     public Team(String name) {
         this.name = name;
@@ -42,24 +43,23 @@ public class Team {
 
 
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "manager_id", nullable = false)
-    public Manager getManager(){
-        return this.manager;
-    }
-    public void setManager(Manager manager){
-        this.manager = manager;
-    }
+//    @OneToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "manager_id", nullable = false)
+//    public Manager getManager(){
+//        return this.manager;
+//    }
+//    public void setManager(Manager manager){
+//        this.manager = manager;
+//    }
 
 
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "player_id", nullable = false)
-    public Player getPlayer(){
-        return this.player;
+    @OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
+    public List<Player> getPlayers(){
+        return this.players;
     }
-    public void setPlayer(Player player){
-        this.player = player;
+    public void setPlayers(List<Player> players){
+        this.players = players;
     }
 
 

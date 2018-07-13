@@ -12,9 +12,12 @@ public class Runner {
 
 
         Team codeClan = new Team("CodeClan");
+        DBHelper.save(codeClan);
+
 
         Manager manager = new Manager("Coach Carter", 100000.00, codeClan);
         DBHelper.save(manager);
+
 
         Player player1 = new Player("Ben", 50000.00, manager, codeClan);
         DBHelper.save(player1);

@@ -31,11 +31,12 @@ public class Player extends Employee {
 
 
 
-    @OneToOne(mappedBy = "player", fetch = FetchType.LAZY)
-    public Team getTeam(){
+    @ManyToOne
+    @JoinColumn(name = "team_id", nullable = false)
+    private Team getTeam(){
         return this.team;
     }
-    public void setTeam(Team team){
+    private void setTeam(Team team){
         this.team = team;
     }
 

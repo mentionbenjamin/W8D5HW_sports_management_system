@@ -31,7 +31,12 @@ public class Manager extends Employee {
 
 
 
-    @OneToOne(mappedBy = "manager", fetch = FetchType.LAZY)
+//    @OneToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "manager_id", nullable = false)
+//
+
+    @OneToOne
+    @JoinColumn(name = "team_id", nullable = false)
     public Team getTeam(){
         return this.team;
     }
