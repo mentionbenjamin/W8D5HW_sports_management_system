@@ -40,6 +40,9 @@ public class Runner {
         DBHelper.save(europaLeague);
 
 
+        // --- FUNNER QUERIES BELOW --- //
+
+
         List<Team> teams = DBHelper.getAll(Team.class);
         List<Player> players = DBHelper.getAll(Player.class);
         List<Manager> managers = DBHelper.getAll(Manager.class);
