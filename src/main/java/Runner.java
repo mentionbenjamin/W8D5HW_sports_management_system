@@ -36,11 +36,14 @@ public class Runner {
 
         Competition championsLeague = new Competition("Champions League");
         DBHelper.save(championsLeague);
+        Competition europaLeague = new Competition("Europa League");
+        DBHelper.save(europaLeague);
 
 
         List<Team> teams = DBHelper.getAll(Team.class);
         List<Player> players = DBHelper.getAll(Player.class);
         List<Manager> managers = DBHelper.getAll(Manager.class);
+        List<Competition> competitions = DBHelper.getAll(Competition.class);
 
 
 
