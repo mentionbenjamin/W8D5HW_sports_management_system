@@ -1,20 +1,20 @@
 package models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import java.util.Set;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "managers")
 public class Manager extends Team {
 
     private double budget;
-    private Set<Player> players;
+    private List<Player> players;
 
     public Manager(String name, double salary, double budget){
         super(name, salary);
         this.budget = budget;
+        this.players = new ArrayList<Player>();
     }
 
     public Manager(){}
@@ -26,6 +26,15 @@ public class Manager extends Team {
     }
     public void setBudget(double budget){
         this.budget = budget;
+    }
+
+
+    @OneToMany(mappedBy = "manager", fetch = FetchType.LAZY)
+    public List<Player> getPlayers(){
+        return this.players;
+    }
+    public void setPlayers(List<Player> players){
+        this.players = players;
     }
 
 }
