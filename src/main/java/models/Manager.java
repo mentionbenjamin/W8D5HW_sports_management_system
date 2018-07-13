@@ -8,6 +8,7 @@ public class Manager extends Employee {
 
     //    private Manager manager;
 
+
     public Manager(String name, double salary) {
         super(name, salary);
     }
