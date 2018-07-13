@@ -13,8 +13,7 @@ public class Competition {
     private String title;
     private Team team;
 
-    public Competition(int id, String title){
-        this.id = id;
+    public Competition(String title){
         this.title = title;
     }
 
