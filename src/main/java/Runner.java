@@ -16,11 +16,11 @@ public class Runner {
         Manager manager = new Manager("Coach Carter", 100000.00, codeClan);
         DBHelper.save(manager);
 
-        Player player1 = new Player("Ben", 50000.00, manager);
+        Player player1 = new Player("Ben", 50000.00, manager, codeClan);
         DBHelper.save(player1);
-        Player player2 = new Player("John", 60000.00, manager);
+        Player player2 = new Player("John", 60000.00, manager, codeClan);
         DBHelper.save(player2);
-        Player player3 = new Player("Jarrod", 70000.00, manager);
+        Player player3 = new Player("Jarrod", 70000.00, manager, codeClan);
         DBHelper.save(player3);
 
 
