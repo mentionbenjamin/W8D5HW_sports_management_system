@@ -9,13 +9,15 @@ public class Team {
 
     private int id;
     private String name;
-
-    public Team() {
-    }
+    private Manager manager;
 
     public Team(String name) {
         this.name = name;
     }
+
+    public Team() {
+    }
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,10 +25,10 @@ public class Team {
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
+
 
 
     @Column(name = "name")
@@ -35,6 +37,17 @@ public class Team {
     }
     public void setName(String name) {
         this.name = name;
+    }
+
+
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "manager_id", nullable = false)
+    public Manager getManager(){
+        return this.manager;
+    }
+    public void setManager(Manager manager){
+        this.manager = manager;
     }
 
 

@@ -9,10 +9,12 @@ import java.util.List;
 public class Manager extends Employee {
 
     private List<Player> players;
+    private Team team;
 
-    public Manager(String name, double salary) {
+    public Manager(String name, double salary, Team team) {
         super(name, salary);
         this.players = new ArrayList<Player>();
+        this.team = team;
     }
 
     public Manager(){}
@@ -27,6 +29,15 @@ public class Manager extends Employee {
         this.players = players;
     }
 
+
+
+    @OneToOne(mappedBy = "manager", fetch = FetchType.LAZY)
+    public Team getTeam(){
+        return this.team;
+    }
+    public void setTeam(Team team){
+        this.team = team;
+    }
 
 
 //    public void addPlayers(Player Player){
