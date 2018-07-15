@@ -50,10 +50,10 @@ public class Player extends Employee {
 
     @ManyToOne
     @JoinColumn(name = "manager_id", nullable = false)
-    private Manager getManager(){
+    public Manager getManager(){
         return this.manager;
     }
-    private void setManager(Manager manager){
+    public void setManager(Manager manager){
         this.manager = manager;
     }
 
@@ -62,10 +62,10 @@ public class Player extends Employee {
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @ManyToOne
     @JoinColumn(name = "team_id", nullable = false)
-    private Team getTeam(){
+    public Team getTeam(){
         return this.team;
     }
-    private void setTeam(Team team){
+    public void setTeam(Team team){
         this.team = team;
     }
 

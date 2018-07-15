@@ -54,10 +54,20 @@ public class Runner {
         List<Team> foundTeamsInCompetition = DBCompetition.getTeamsInCompetition(championsLeague);
 
         // LIST PLAYERS IN AGE ASCENDING ORDER
-        List<Player> playersByAgeAscending = DBPlayer.orderByAge();
+        List<Player> playersInAgeAscendingOrder = DBPlayer.orderByAge();
 
-        // FIND AVERAGE PLAYERS AGE
+        // FIND PLAYERS AVERAGE AGE
         double averageAgePlayer = DBPlayer.getAverageAge();
+
+
+
+
+        // GET PLAYERS MANAGER
+        DBPlayer.getPlayersManager(player3);
+
+
+        List<Player> playersForManager = DBManager.getPlayersForManager(kloppo);
+
 
 
     }
