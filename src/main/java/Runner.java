@@ -22,13 +22,13 @@ public class Runner {
         DBHelper.save(kloppo);
 
 
-        Player player1 = new Player("Ben", 50000.00, PositionType.STRIKER, carter, codeClan);
+        Player player1 = new Player("Jeremy", 50000.00, PositionType.STRIKER, carter, codeClan);
         DBHelper.save(player1);
-        Player player2 = new Player("John", 60000.00, PositionType.ATTACKINGMIDFIELD, carter, codeClan);
+        Player player2 = new Player("Joe", 60000.00, PositionType.ATTACKINGMIDFIELD, carter, codeClan);
         DBHelper.save(player2);
-        Player player3 = new Player("Jarrod", 95000.00, PositionType.GOALKEEPER, kloppo, northCoders);
+        Player player3 = new Player("Jake", 95000.00, PositionType.GOALKEEPER, kloppo, northCoders);
         DBHelper.save(player3);
-        Player player4 = new Player("Colin", 75000.00, PositionType.RIGHTBACK, kloppo, northCoders);
+        Player player4 = new Player("Jamie", 75000.00, PositionType.RIGHTBACK, kloppo, northCoders);
         DBHelper.save(player4);
 
 

@@ -6,7 +6,7 @@ import javax.persistence.*;
 import javax.swing.text.Position;
 
 @Entity
-@Table(name = "employees")
+@Table(name = "players")
 public class Player extends Employee {
 
     private PositionType position;
@@ -25,7 +25,7 @@ public class Player extends Employee {
 
 
 
-    @Column(name = "positions")
+    @Column(name = "position")
     public PositionType getPosition() {
         return position;
     }

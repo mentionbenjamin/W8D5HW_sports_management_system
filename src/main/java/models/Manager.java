@@ -31,10 +31,6 @@ public class Manager extends Employee {
 
 
 
-//    @OneToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "manager_id", nullable = false)
-//
-
     @OneToOne
     @JoinColumn(name = "team_id", nullable = false)
     public Team getTeam(){
@@ -45,9 +41,6 @@ public class Manager extends Employee {
     }
 
 
-//    public void addPlayers(Player Player){
-//        this.players.add(player);
-//    }
 
 
 }

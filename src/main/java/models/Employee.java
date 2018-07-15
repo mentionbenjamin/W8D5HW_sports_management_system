@@ -5,7 +5,6 @@ import javax.persistence.*;
 @Entity
 @Table(name = "employees")
 @Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "type")
 public abstract class Employee {
 
     private int id;

@@ -1,6 +1,9 @@
 package models;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -12,9 +15,11 @@ public class Team {
     private String name;
     private Manager manager;
     private List<Player> players;
+    private List<Competition> competitions;
 
     public Team(String name) {
         this.name = name;
+        this.competitions = new ArrayList<Competition>();
     }
 
     public Team() {
@@ -43,17 +48,6 @@ public class Team {
 
 
 
-//    @OneToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "manager_id", nullable = false)
-//    public Manager getManager(){
-//        return this.manager;
-//    }
-//    public void setManager(Manager manager){
-//        this.manager = manager;
-//    }
-
-
-
     @OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
     public List<Player> getPlayers(){
         return this.players;
@@ -63,4 +57,16 @@ public class Team {
     }
 
 
+
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @ManyToMany
+    @JoinTable(name = "teams_competitions",
+                joinColumns = {@JoinColumn(name = "team_id", nullable = false, updatable = false)},
+                inverseJoinColumns = {@JoinColumn(name = "competition_id", nullable = false, updatable = false)})
+    public List<Competition> getCompetitions() {
+        return competitions;
+    }
+    public void setCompetitions(List<Competition> competitions) {
+        this.competitions = competitions;
+    }
 }

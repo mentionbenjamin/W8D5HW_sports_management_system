@@ -1,9 +1,10 @@
 package models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "competitions")
@@ -11,13 +12,14 @@ public class Competition {
 
     private int id;
     private String title;
-    private Team team;
+    private List<Team> team;
 
     public Competition(String title){
         this.title = title;
     }
 
     public Competition(){}
+
 
 
     @Id
@@ -30,6 +32,7 @@ public class Competition {
     }
 
 
+
     @Column(name = "title")
     public String getTitle(){
         return this.title;
@@ -38,4 +41,17 @@ public class Competition {
         this.title = title;
     }
 
+
+
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @ManyToMany
+    @JoinTable(name = "teams_competitions",
+                joinColumns = {@JoinColumn(name = "team_id", nullable = false, updatable = false)},
+                inverseJoinColumns = {@JoinColumn(name = "competition_id", nullable = false, updatable = false)})
+    public List<Team> getTeam() {
+        return team;
+    }
+    public void setTeam(List<Team> team) {
+        this.team = team;
+    }
 }
