@@ -1,8 +1,5 @@
 import db.DBHelper;
-import models.Manager;
-import models.Player;
-import models.PositionType;
-import models.Team;
+import models.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,6 +15,8 @@ public class TeamTest {
     Player player2;
     Player player3;
     Player player4;
+    Competition championsLeague;
+    Competition europaLeague;
 
     @Before
     public void setUp(){
@@ -29,7 +28,10 @@ public class TeamTest {
         player2 = new Player("Joe", 60000.00, 21, PositionType.ATTACKINGMIDFIELD, carter, codeClan);
         player3 = new Player("Jake", 95000.00, 28, PositionType.GOALKEEPER, kloppo, northCoders);
         player4 = new Player("Jamie", 75000.00, 32, PositionType.RIGHTBACK, kloppo, northCoders);
+        Competition championsLeague = new Competition("Champions League");
+        Competition europaLeague = new Competition("Europa League");
     }
+
 
 
     @Test
