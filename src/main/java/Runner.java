@@ -42,19 +42,20 @@ public class Runner {
 
         // --- FUNNER QUERIES BELOW --- //
 
-
+        // FIND ALL
         List<Team> teams = DBHelper.getAll(Team.class);
         List<Player> players = DBHelper.getAll(Player.class);
         List<Manager> managers = DBHelper.getAll(Manager.class);
         List<Competition> competitions = DBHelper.getAll(Competition.class);
 
+        // FIND BY ID
         Player foundPlayer = DBHelper.find(Player.class, player1.getId());
 
-
+        // ADD TEAM TO SPECIFIC COMPETITION
         DBTeam.addTeamToCompetition(codeClan, championsLeague);
         DBTeam.addTeamToCompetition(northCoders, championsLeague);
 
-
+        // FIND AND LIST ALL TEAMS IN SPECIFIC COMPETITION
         List<Team> foundTeamsInCompetition = DBCompetition.getTeamsInCompetition(championsLeague);
 
 

@@ -14,15 +14,15 @@ public class DBCompetition {
 
     private static Session session;
 
-    public static List<Team> getTeamsInCompetition(Competition competition){
+    public static List<Team> getTeamsInCompetition(Competition competition) {
         List<Team> results = null;
         session = HibernateUtil.getSessionFactory().openSession();
         try {
             Criteria cr = session.createCriteria(Team.class);
-            cr.createAlias("competitions", "competition"); // ADDED
-            cr.add(Restrictions.eq("competition.id", competition.getId())); // ADDED
+            cr.createAlias("competitions", "competition"); // FOR COMPETITION IN COMPETITION FIND ANY TEAMS.
+            cr.add(Restrictions.eq("competition.id", competition.getId())); // USING THE ID OF THE COMPETITION INPUT TO SEARCH FOR
             results = cr.list();
-        } catch (HibernateException ex){
+        } catch (HibernateException ex) {
             ex.printStackTrace();
         } finally {
             session.close();
