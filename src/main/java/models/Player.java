@@ -9,19 +9,32 @@ import javax.swing.text.Position;
 @Table(name = "players")
 public class Player extends Employee {
 
+    private int age;
     private PositionType position;
     private Manager manager;
     private Team team;
 
 
-    public Player(String name, double salary, PositionType position, Manager manager, Team team) {
+    public Player(String name, double salary, int age, PositionType position, Manager manager, Team team) {
         super(name, salary);
+        this.age = age;
         this.position = position;
         this.manager = manager;
         this.team = team;
     }
 
     public Player(){}
+
+
+
+
+    @Column(name = "age")
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
 
 
 

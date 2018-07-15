@@ -1,7 +1,4 @@
-import db.DBCompetition;
-import db.DBHelper;
-import db.DBManager;
-import db.DBTeam;
+import db.*;
 import javafx.geometry.Pos;
 import models.*;
 
@@ -17,22 +14,19 @@ public class Runner {
         Team northCoders = new Team("North Coders");
         DBHelper.save(northCoders);
 
-
         Manager carter = new Manager("Coach Carter", 125000.00, codeClan);
         DBHelper.save(carter);
         Manager kloppo = new Manager("Coach Kloppo", 150000.00, codeClan);
         DBHelper.save(kloppo);
 
-
-        Player player1 = new Player("Jeremy", 50000.00, PositionType.STRIKER, carter, codeClan);
+        Player player1 = new Player("Jeremy", 50000.00, 24, PositionType.STRIKER, carter, codeClan);
         DBHelper.save(player1);
-        Player player2 = new Player("Joe", 60000.00, PositionType.ATTACKINGMIDFIELD, carter, codeClan);
+        Player player2 = new Player("Joe", 60000.00, 21, PositionType.ATTACKINGMIDFIELD, carter, codeClan);
         DBHelper.save(player2);
-        Player player3 = new Player("Jake", 95000.00, PositionType.GOALKEEPER, kloppo, northCoders);
+        Player player3 = new Player("Jake", 95000.00, 28, PositionType.GOALKEEPER, kloppo, northCoders);
         DBHelper.save(player3);
-        Player player4 = new Player("Jamie", 75000.00, PositionType.RIGHTBACK, kloppo, northCoders);
+        Player player4 = new Player("Jamie", 75000.00, 32, PositionType.RIGHTBACK, kloppo, northCoders);
         DBHelper.save(player4);
-
 
         Competition championsLeague = new Competition("Champions League");
         DBHelper.save(championsLeague);
@@ -41,6 +35,7 @@ public class Runner {
 
 
         // --- FUNNER QUERIES BELOW --- //
+
 
         // FIND ALL
         List<Team> teams = DBHelper.getAll(Team.class);
@@ -58,6 +53,9 @@ public class Runner {
         // FIND AND LIST ALL TEAMS IN SPECIFIC COMPETITION
         List<Team> foundTeamsInCompetition = DBCompetition.getTeamsInCompetition(championsLeague);
 
+
+
+        List<Player> playersByAgeAscending = DBPlayer.orderByAge();
 
 
     }
