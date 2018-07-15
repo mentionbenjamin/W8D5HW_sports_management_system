@@ -55,22 +55,22 @@ public class DBPlayer {
 
 
 
-    public static Manager getPlayersManager(Player player){
-        session = HibernateUtil.getSessionFactory().openSession();
-        Manager manager = null;
-        try {
-            transaction = session.beginTransaction();
-            Criteria cr = session.createCriteria(Manager.class);
-            cr.add(Restrictions.eq("team", player.getTeam()));
-            manager = (Manager)cr.uniqueResult();
-        } catch (HibernateException e) {
-            transaction.rollback();
-            e.printStackTrace();
-        } finally {
-            session.close();
-        }
-        return manager;
-    }
+//    public static Manager getPlayersManager(Player player){
+//        session = HibernateUtil.getSessionFactory().openSession();
+//        Manager manager = null;
+//        try {
+//            transaction = session.beginTransaction();
+//            Criteria cr = session.createCriteria(Manager.class);
+//            cr.add(Restrictions.eq("team", player.getTeam()));
+//            manager = (Manager)cr.uniqueResult();
+//        } catch (HibernateException e) {
+//            transaction.rollback();
+//            e.printStackTrace();
+//        } finally {
+//            session.close();
+//        }
+//        return manager;
+//    }
 
 
 }

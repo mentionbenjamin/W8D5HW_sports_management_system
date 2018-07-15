@@ -16,7 +16,7 @@ public class Runner {
 
         Manager carter = new Manager("Coach Carter", 125000.00, codeClan);
         DBHelper.save(carter);
-        Manager kloppo = new Manager("Coach Kloppo", 150000.00, codeClan);
+        Manager kloppo = new Manager("Coach Kloppo", 150000.00, northCoders);
         DBHelper.save(kloppo);
 
         Player player1 = new Player("Jeremy", 50000.00, 24, PositionType.STRIKER, carter, codeClan);
@@ -43,30 +43,36 @@ public class Runner {
         List<Manager> managers = DBHelper.getAll(Manager.class);
         List<Competition> competitions = DBHelper.getAll(Competition.class);
 
+
         // FIND BY ID
         Player foundPlayer = DBHelper.find(Player.class, player1.getId());
+
 
         // ADD TEAM TO SPECIFIC COMPETITION
         DBTeam.addTeamToCompetition(codeClan, championsLeague);
         DBTeam.addTeamToCompetition(northCoders, championsLeague);
 
+
         // FIND AND LIST ALL TEAMS IN SPECIFIC COMPETITION
         List<Team> foundTeamsInCompetition = DBCompetition.getTeamsInCompetition(championsLeague);
 
+
         // LIST PLAYERS IN AGE ASCENDING ORDER
         List<Player> playersInAgeAscendingOrder = DBPlayer.orderByAge();
+
 
         // FIND PLAYERS AVERAGE AGE
         double averageAgePlayer = DBPlayer.getAverageAge();
 
 
-
-
-        // GET PLAYERS MANAGER
-        DBPlayer.getPlayersManager(player3);
-
-
+        // GET PLAYERS FOR MANAGER
         List<Player> playersForManager = DBManager.getPlayersForManager(kloppo);
+
+
+
+
+//        // GET PLAYERS MANAGER
+//        Manager managerForPlayers = DBPlayer.getPlayersManager(player1);
 
 
 
