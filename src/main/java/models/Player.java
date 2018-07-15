@@ -13,14 +13,16 @@ public class Player extends Employee {
     private PositionType position;
     private Manager manager;
     private Team team;
+    private double rating;
 
 
-    public Player(String name, double salary, int age, PositionType position, Manager manager, Team team) {
+    public Player(String name, double salary, int age, PositionType position, Manager manager, Team team, double rating) {
         super(name, salary);
         this.age = age;
         this.position = position;
         this.manager = manager;
         this.team = team;
+        this.rating = rating;
     }
 
     public Player(){}
@@ -71,4 +73,11 @@ public class Player extends Employee {
 
 
 
+    @Column(name = "rating")
+    public double getRating() {
+        return rating;
+    }
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
 }

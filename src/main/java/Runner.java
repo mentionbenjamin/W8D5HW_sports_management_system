@@ -19,13 +19,13 @@ public class Runner {
         Manager kloppo = new Manager("Coach Kloppo", 150000.00, northCoders);
         DBHelper.save(kloppo);
 
-        Player player1 = new Player("Jeremy", 50000.00, 24, PositionType.STRIKER, carter, codeClan);
+        Player player1 = new Player("Jeremy", 50000.00, 24, PositionType.STRIKER, carter, codeClan, 8.6);
         DBHelper.save(player1);
-        Player player2 = new Player("Joe", 60000.00, 21, PositionType.ATTACKINGMIDFIELD, carter, codeClan);
+        Player player2 = new Player("Joe", 60000.00, 21, PositionType.ATTACKINGMIDFIELD, carter, codeClan, 6.5);
         DBHelper.save(player2);
-        Player player3 = new Player("Jake", 95000.00, 28, PositionType.GOALKEEPER, kloppo, northCoders);
+        Player player3 = new Player("Jake", 95000.00, 28, PositionType.GOALKEEPER, kloppo, northCoders, 7.9);
         DBHelper.save(player3);
-        Player player4 = new Player("Jamie", 75000.00, 32, PositionType.RIGHTBACK, kloppo, northCoders);
+        Player player4 = new Player("Jamie", 75000.00, 32, PositionType.RIGHTBACK, kloppo, northCoders, 6.2);
         DBHelper.save(player4);
 
         Competition championsLeague = new Competition("Champions League");
