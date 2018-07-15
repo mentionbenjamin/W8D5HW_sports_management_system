@@ -1,3 +1,4 @@
+import db.DBCompetition;
 import db.DBHelper;
 import db.DBManager;
 import db.DBTeam;
@@ -52,6 +53,9 @@ public class Runner {
 
         DBTeam.addTeamToCompetition(codeClan, championsLeague);
         DBTeam.addTeamToCompetition(northCoders, championsLeague);
+
+
+        List<Team> foundTeamsInCompetition = DBCompetition.getTeamsInCompetition(championsLeague);
 
 
 
