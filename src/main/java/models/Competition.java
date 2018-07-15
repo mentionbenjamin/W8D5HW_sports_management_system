@@ -4,6 +4,7 @@ import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -12,10 +13,11 @@ public class Competition {
 
     private int id;
     private String title;
-    private List<Team> team;
+    private List<Team> teams;
 
     public Competition(String title){
         this.title = title;
+        this.teams = new ArrayList<Team>();
     }
 
     public Competition(){}
@@ -46,12 +48,18 @@ public class Competition {
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @ManyToMany
     @JoinTable(name = "teams_competitions",
-                joinColumns = {@JoinColumn(name = "team_id", nullable = false, updatable = false)},
-                inverseJoinColumns = {@JoinColumn(name = "competition_id", nullable = false, updatable = false)})
+                joinColumns = {@JoinColumn(name = "competition_id", nullable = false, updatable = false)},
+                inverseJoinColumns = {@JoinColumn(name = "team_id", nullable = false, updatable = false)})
     public List<Team> getTeam() {
-        return team;
+        return teams;
     }
     public void setTeam(List<Team> team) {
-        this.team = team;
+        this.teams = team;
+    }
+
+
+
+    public void addTeam(Team team) {
+        this.teams.add(team);
     }
 }

@@ -1,5 +1,6 @@
 import db.DBHelper;
 import db.DBManager;
+import db.DBTeam;
 import javafx.geometry.Pos;
 import models.*;
 
@@ -47,11 +48,9 @@ public class Runner {
         List<Competition> competitions = DBHelper.getAll(Competition.class);
 
 
+        DBTeam.addTeamToCompetition(codeClan, championsLeague);
+        DBTeam.addTeamToCompetition(northCoders, championsLeague);
 
-
-//        manager.addPlayers(player1);
-
-//        List<Player> playersForManager = DBManager.getPlayersForManager(manager);
 
 
     }

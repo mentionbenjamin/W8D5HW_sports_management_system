@@ -69,4 +69,10 @@ public class Team {
     public void setCompetitions(List<Competition> competitions) {
         this.competitions = competitions;
     }
+
+
+
+    public void addCompetition(Competition competition) {
+        this.competitions.add(competition);
+    }
 }
