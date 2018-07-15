@@ -47,6 +47,8 @@ public class Runner {
         List<Manager> managers = DBHelper.getAll(Manager.class);
         List<Competition> competitions = DBHelper.getAll(Competition.class);
 
+        Player foundPlayer = DBHelper.find(Player.class, player1.getId());
+
 
         DBTeam.addTeamToCompetition(codeClan, championsLeague);
         DBTeam.addTeamToCompetition(northCoders, championsLeague);
