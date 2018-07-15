@@ -26,7 +26,7 @@ public class Runner {
         DBHelper.save(player1);
         Player player2 = new Player("John", 60000.00, PositionType.ATTACKINGMIDFIELD, carter, codeClan);
         DBHelper.save(player2);
-        Player player3 = new Player("Jarrod", 95000.00, PositionType.ATTACKINGMIDFIELD, kloppo, northCoders);
+        Player player3 = new Player("Jarrod", 95000.00, PositionType.GOALKEEPER, kloppo, northCoders);
         DBHelper.save(player3);
         Player player4 = new Player("Colin", 75000.00, PositionType.RIGHTBACK, kloppo, northCoders);
         DBHelper.save(player4);

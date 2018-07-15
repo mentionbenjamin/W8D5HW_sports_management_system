@@ -1,5 +1,7 @@
 package models;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import javax.swing.text.Position;
 
@@ -33,7 +35,6 @@ public class Player extends Employee {
 
 
 
-
     @ManyToOne
     @JoinColumn(name = "manager_id", nullable = false)
     private Manager getManager(){
@@ -45,6 +46,7 @@ public class Player extends Employee {
 
 
 
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @ManyToOne
     @JoinColumn(name = "team_id", nullable = false)
     private Team getTeam(){
