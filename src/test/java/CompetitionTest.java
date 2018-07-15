@@ -20,8 +20,8 @@ public class CompetitionTest {
 
     @Before
     public void setUp(){
-        codeClan = new Team("Code Clan");
-        northCoders = new Team("North Coders");
+        codeClan = new Team("Code Clan", 10);
+        northCoders = new Team("North Coders", 15);
         carter = new Manager("Coach Carter", 125000.00, codeClan);
         kloppo = new Manager("Coach Kloppo", 150000.00, northCoders);
         player1 = new Player("Jeremy", 50000.00, 24, PositionType.STRIKER, carter, codeClan);

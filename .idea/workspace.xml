@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72a1b722-5fb7-49ba-b4f4-2383202fd536" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/CompetitionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CompetitionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Team.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ManagerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlayerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TeamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TeamTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManagerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ManagerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="446">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1102#1103#0" expanded="true" />
@@ -45,11 +46,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Team.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/models/Team.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="PlayerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/PlayerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+            <state relative-caret-position="165">
+              <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1102#1103#0" expanded="true" />
@@ -62,8 +75,8 @@
       <file leaf-file-name="TeamTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TeamTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1102#1103#0" expanded="true" />
@@ -76,12 +89,12 @@
       <file leaf-file-name="CompetitionTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/CompetitionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="48" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="48" />
+            <state>
+              <caret selection-end-line="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1102#1103#0" expanded="true" />
-                <element signature="e#1164#1165#0" expanded="true" />
+                <element signature="e#1214#1215#0" expanded="true" />
+                <element signature="e#1285#1286#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,15 +141,15 @@
         <option value="$PROJECT_DIR$/src/main/java/models/Manager.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/DBTeam.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Competition.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/Team.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/DBCompetition.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/DBPlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Runner.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TeamTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/CompetitionTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TeamTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/PlayerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/Team.java" />
       </list>
     </option>
   </component>
@@ -277,9 +290,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CompetitionTest">
+  <component name="RunManager" selected="JUnit.All in SportsManagement">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="All in SportsManagement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SportsManagement" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="CompetitionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SportsManagement" />
@@ -306,23 +336,6 @@
       <option name="MAIN_CLASS_NAME" value="ManagerTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ManagerTest.setName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SportsManagement" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ManagerTest" />
-      <option name="METHOD_NAME" value="setName" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -405,19 +418,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.ManagerTest.setName" />
       <item itemvalue="JUnit.PlayerTest" />
       <item itemvalue="JUnit.TeamTest" />
       <item itemvalue="JUnit.ManagerTest" />
       <item itemvalue="JUnit.CompetitionTest" />
+      <item itemvalue="JUnit.All in SportsManagement" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in SportsManagement" />
         <item itemvalue="JUnit.CompetitionTest" />
         <item itemvalue="JUnit.ManagerTest" />
         <item itemvalue="JUnit.TeamTest" />
         <item itemvalue="JUnit.PlayerTest" />
-        <item itemvalue="JUnit.ManagerTest.setName" />
       </list>
     </recent_temporary>
   </component>
@@ -432,14 +445,11 @@
       <option name="presentableId" value="Default" />
       <updated>1531478787183</updated>
       <workItem from="1531653685028" duration="758000" />
-      <workItem from="1531654558185" duration="9905000" />
+      <workItem from="1531654558185" duration="10229000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ManagerTest_getName - 2018.07.15 at 15h 19m 44s.xml">
-      <configuration name="ManagerTest.getName" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ManagerTest_getName - 2018.07.15 at 15h 24m 43s.xml">
       <configuration name="ManagerTest.getName" configurationId="JUnit" />
     </history-entry>
@@ -458,9 +468,21 @@
     <history-entry file="TeamTest - 2018.07.15 at 15h 31m 41s.xml">
       <configuration name="TeamTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ManagerTest - 2018.07.15 at 15h 33m 41s.xml">
+      <configuration name="ManagerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompetitionTest - 2018.07.15 at 15h 35m 39s.xml">
+      <configuration name="CompetitionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompetitionTest - 2018.07.15 at 15h 35m 53s.xml">
+      <configuration name="CompetitionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_SportsManagement - 2018.07.15 at 15h 36m 48s.xml">
+      <configuration name="All in SportsManagement" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10663000" />
+    <option name="totallyTimeSpent" value="10987000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -486,11 +508,11 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3293011" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32848486" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.31030303" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.31030303" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Persistence" order="3" side_tool="true" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19384836" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19384836" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
@@ -772,16 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/Team.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/Manager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -850,18 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TeamTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -874,8 +874,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CompetitionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="48" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="48" />
+        <state>
+          <caret selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1214#1215#0" expanded="true" />
+            <element signature="e#1285#1286#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TeamTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1102#1103#0" expanded="true" />
@@ -886,8 +898,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/PlayerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        <state relative-caret-position="165">
+          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1102#1103#0" expanded="true" />
@@ -898,12 +910,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="446">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1102#1103#0" expanded="true" />
             <element signature="e#1164#1165#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/Team.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -13,12 +13,14 @@ public class Team {
 
     private int id;
     private String name;
+    private int points;
     private Manager manager;
     private List<Player> players;
     private List<Competition> competitions;
 
-    public Team(String name) {
+    public Team(String name, int points) {
         this.name = name;
+        this.points = points;
         this.competitions = new ArrayList<Competition>();
     }
 
@@ -44,6 +46,16 @@ public class Team {
     }
     public void setName(String name) {
         this.name = name;
+    }
+
+
+
+    @Column(name = "points")
+    public int getPoints() {
+        return points;
+    }
+    public void setPoints(int points) {
+        this.points = points;
     }
 
 

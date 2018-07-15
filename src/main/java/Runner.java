@@ -9,9 +9,9 @@ public class Runner {
     public static void main(String [] args){
 
 
-        Team codeClan = new Team("Code Clan");
+        Team codeClan = new Team("Code Clan", 10);
         DBHelper.save(codeClan);
-        Team northCoders = new Team("North Coders");
+        Team northCoders = new Team("North Coders", 15);
         DBHelper.save(northCoders);
 
         Manager carter = new Manager("Coach Carter", 125000.00, codeClan);

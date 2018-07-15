@@ -28,8 +28,8 @@ public class PlayerTest {
         player2 = new Player("Joe", 60000.00, 21, PositionType.ATTACKINGMIDFIELD, carter, codeClan);
         player3 = new Player("Jake", 95000.00, 28, PositionType.GOALKEEPER, kloppo, northCoders);
         player4 = new Player("Jamie", 75000.00, 32, PositionType.RIGHTBACK, kloppo, northCoders);
-        Competition championsLeague = new Competition("Champions League");
-        Competition europaLeague = new Competition("Europa League");
+        championsLeague = new Competition("Champions League");
+        europaLeague = new Competition("Europa League");
     }
 
 
