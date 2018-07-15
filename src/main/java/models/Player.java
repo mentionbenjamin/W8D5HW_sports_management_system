@@ -1,17 +1,18 @@
 package models;
 
 import javax.persistence.*;
+import javax.swing.text.Position;
 
 @Entity
-@Table(name = "players")
+@Table(name = "employees")
 public class Player extends Employee {
 
-    private Position position;
+    private PositionType position;
     private Manager manager;
     private Team team;
 
 
-    public Player(String name, double salary, Position position, Manager manager, Team team) {
+    public Player(String name, double salary, PositionType position, Manager manager, Team team) {
         super(name, salary);
         this.position = position;
         this.manager = manager;
@@ -22,13 +23,14 @@ public class Player extends Employee {
 
 
 
-    @Column(name = "position")
-    public Position getPosition(){
-        return this.position;
+    @Column(name = "positions")
+    public PositionType getPosition() {
+        return position;
     }
-    public void setPosition(Position position){
+    public void setPosition(PositionType position) {
         this.position = position;
     }
+
 
 
 
