@@ -1,0 +1,16 @@
+package models;
+
+public enum PositionType {
+
+    GOALKEEPER,
+    LEFTBACK,
+    CENTREBACK,
+    RIGHTBACK,
+    LEFTMIDFIELD,
+    DEFENDINGMIDFIELD,
+    CENTREMIDFIELD,
+    ATTACKINGMIDFIELD,
+    RIGHTMIDFIELD,
+    STRIKER
+
+}
